@@ -1,0 +1,43 @@
+\documentclass{report}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage[latin1]{inputenc}% erm\"oglich die direkte Eingabe der Umlaute 
+\usepackage[T1]{fontenc} % das Trennen der Umlaute
+\usepackage{ngerman} % hiermit werden deutsche Bezeichnungen genutzt und 
+                     % die W\"orter werden anhand der neue Rechtschreibung 
+             % automatisch getrennt. 
+\usepackage{graphicx}
+\usepackage{comment}
+\graphicspath{ {} }
+\usepackage{subcaption}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage[section]{placeins}
+\title{Short Documentation of SRC analysis}
+\begin{document}
+
+\maketitle
+
+\section{Setup}
+Beam energy: 400 AMeV\newline
+Beamtype: 12C\newline
+Target: CH2\newline
+Beam Time: 3 hours\newline
+Tracking detectors: MWPC 1,2,3 (just x position)\newline
+ToF measurement: START to ToFW\newline
+Charge Measurement: TWIM Music\newline
+Event selection criteria for CALIFA: two hits with E\textunderscore hit $> 30$ MeV (laboratory system) and 10B(11B) as daughter particle (exclusive events).\newline
+No other cuts (for now).\newline
+
+\section{12C(p,2p)11B analysis}
+
+\section{12C(p,2p)10B}
+
+
+
+\end{document}
+
