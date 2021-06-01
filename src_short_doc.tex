@@ -13,7 +13,8 @@
              % automatisch getrennt. 
 \usepackage{graphicx}
 \usepackage{comment}
-\graphicspath{ {} }
+\usepackage{hyperref}
+\graphicspath{ {./} }
 \usepackage{subcaption}
 \newcommand{\sectionbreak}{\clearpage}
 \usepackage[section]{placeins}
@@ -34,10 +35,118 @@ Event selection criteria for CALIFA: two hits with E\textunderscore hit $> 30$ M
 No other cuts (for now).\newline
 
 \section{12C(p,2p)11B analysis}
+The Energy and momentum conservation for this reaction can be expressed as:\newline
+$\bar{p}_{12C} + \bar{p}_{tg} = \bar{p}_{1} + \bar{p}_{2} + \bar{p}_{11B}$ (four momentum vectors) \newline
+Assuming QE scattering in the mean field we approximate:\newline
+$\bar{p}_{12C} = \bar{p}_{i} + \bar{p}_{11B}$ where $\bar{p}_{i}$ is the initial proton-four-momentum inside the 12C ion.\newline
+Hence we obtain:\newline
+$\bar{p}_{i} \approx \bar{p}_{miss} \equiv \bar{p}_{1} + \bar{p}_{2} - \bar{p}_{tg}$ \newline
+And the missing Energy $E_{miss}$ is defined as:\newline
+$E_{miss} \equiv m_{p} - e_{miss}$ (where $e_{miss}$ is the energy component of $\bar{p}_{miss}$ in the 12C frame).\newline
+\subsection{Plots:}
+The analysis of the missing momentum (components) is summarized in following plots:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_mom_11B.png}
+  \caption{Momentum of the initial proton inside the 12C ion.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_mom_11B_x_comp.png}
+  \caption{Momentum of the initial proton inside the 12C ion - x component.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_mom_11B_z_comp.png}
+  \caption{Momentum of the initial proton inside the 12C ion - z component. The shift in $p_{miss_z}$ is associated with a strong pp cross-section scaling with c.m. energy.}
+\end{figure}
+\newpage
+The plots relating to the missing energy $E_{miss}$ are summarized in the following plots:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_E_12C_11B.png}
+  \caption{Missing energy calculated in teh 12C rest frame.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_E_12C_11B_vs_theta.png}
+  \caption{Missing energy calculated in teh 12C rest frame versus theta1 + theta2. Most of the reactions are in the QE scattering region.}
+\end{figure}
+\newline
+\newpage
+
+The plots relating to the angular distribution of the two protons from the 12C(p,2p)11B reaction:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{theta1_plus_theta2.png}
+  \caption{Theta1 plus theta2 for proton 1 and proton 2 distribution.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{theta1_vs_theta2_right_binning.png}
+  \caption{Theta1 vs theta2 for proton 1 and proton 2 where proton 1 is the one with higher kinetic energy.}
+\end{figure}
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{psi1_vs_psi2.png}
+  \caption{Arzimuthal angular distribution for proton 1 and proton 2.}
+\end{figure}
+\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{cos_11B_p_i.png}
+  \caption{Cosine of the opening angle between the missing and fragment moment in 12C c.m. frame.}
+\end{figure}
+\newline
+\newpage
+
+As gamma spectrum related to the 12C(p,2p)11B reaction we get:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{gamma_spec.png}
+  \caption{Doppler reconstructed gamma spectrum for the first excited states (with a resolution around $10\%$).}
+\end{figure}
+\newline
 
 \section{12C(p,2p)10B}
+For this reaction the missing momentum (which equals to the initial proton momentum inside the 12C ion) is same as before:\newline
+$\bar{p}_{i} \approx \bar{p}_{miss} \equiv \bar{p}_{1} + \bar{p}_{2} - \bar{p}_{tg}$ \newline
+The missing nucleon mass in the entire reaction is given by:\newline
+$M^2_{miss,excl} = \big(\bar{p}_{12C} + \bar{p}_{tg} - \bar{p}_{1} - \bar{p}_{2} - \bar{p}_{10B}\big)^2$\newline
+The analysis of the missing momentum is summarized in following plots:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_mom_12C_10B.png}
+  \caption{Initial proton momentum inside the 12C ion for the 12C(p,2p)10B reaction.}
+\end{figure}
+\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_mass_12C_10B.png}
+  \caption{Missing mass with a peak $\approx m_{N}$ (where $m_{N}$ is the nucleon mass).}
+\end{figure}
+\newline
+\newpage
 
+To compare the missing momentum between the 12C(p,2p)11B and 12C(p,2p)10B reaction:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{missing_mom_compare.png}
+  \caption{Red: missing momentum for 12C(p,2p)11B reaction. Green: missing momentum for 12C(p,2p)10B reaction.}
+\end{figure}
+\newline
+\newpage
 
+The plots relating the angular distributions:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{theta1_plus_theta2_src.png}
+  \caption{Theta1 plus theta2 for the outgoing protons (or proton and deuteron??).}
+\end{figure}
+\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{cos_src_pair.png}
+  \caption{Cosine between the recoil nucleon and missing momentum.}
+\end{figure}
+\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{cos_src_pair_vs_10B.png}
+  \caption{Cosine between 10B fragment and missing momentum.}
+\end{figure}
+\newline
+\newpage
+
+\section{To Dos and Open Questions}
+\begin{itemize}
+\item plot momentum of 10B fragment versus missing momentum
+\item plot mandelstam variables and compare to plots from \url{https://www.nature.com/articles/s41567-021-01193-4}
+\end{itemize}
 
 \end{document}
 
