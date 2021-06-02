@@ -87,6 +87,7 @@ The plots relating to the angular distribution of the two protons from the 12C(p
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{cos_11B_p_i.png}
   \caption{Cosine of the opening angle between the missing and fragment moment in 12C c.m. frame.}
+  \label{fig:11b_p_i_distr}
 \end{figure}
 \newline
 \newpage
@@ -128,6 +129,7 @@ The plots relating the angular distributions:\newline
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{theta1_plus_theta2_src.png}
   \caption{Theta1 plus theta2 for the outgoing protons (or proton and deuteron??).}
+  \label{fig:theta1_theta2_distr}
 \end{figure}
 \newline
 \begin{figure}[!htb]
@@ -137,7 +139,8 @@ The plots relating the angular distributions:\newline
 \newline
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{cos_src_pair_vs_10B.png}
-  \caption{Cosine between 10B fragment and missing momentum.}
+  \caption{Cosine of the angle between the 10B fragment and pair relative momentum.}
+  \label{fig:factorization}
 \end{figure}
 \newline
 \newpage
@@ -146,6 +149,18 @@ The plots relating the angular distributions:\newline
 \begin{itemize}
 \item plot momentum of 10B fragment versus missing momentum
 \item plot mandelstam variables and compare to plots from \url{https://www.nature.com/articles/s41567-021-01193-4}
+\item Analyze the plot \ref{fig:factorization} in more detail. This should actually be an uniform flat distribution (slightly shaped according to the acceptance of the detectors). It's not so the case in \ref{fig:factorization}.
+\item the angular distribution in \ref{fig:11b_p_i_distr} is not as expected. We would expect back-to-back momenta in the 12C rest frame. When transforming it back to the 11B  rest frame (in z-direction) instead we get the following plot:\newline
+\begin{figure}[!htb]
+  \includegraphics[width=\linewidth]{cos_11b_back_to_back.png}
+	\caption{Distribution between the cosine of the opening angle between the missing and fragment momentum in the 11B rest frame (in z-direction)}
+\end{figure}
+\newline
+As beam energy for 12C I use the value 400AMeV. It seems for me that it is set too high and attenuated down the beamline....
+\item the 12C(p,2p)10B reaction can come from src,(p,pd) or direct removal of neutron. In \ref{fig:theta1_theta2_distr} we see two small peaks beyond 80 degrees. Could those be a hint for proton-deuteron scattering? Should I use a selection cut as in \url{https://www.nature.com/articles/s41567-021-01193-4} ($p_{miss} \geq 350 MeV$). For the neutron removal, do I have to look into the NEULAND data or should I already see some excited states in the gamma spectrum?
+\item plot gamma spectrum for 12C(p,2p)10B.
+\item look at high energy runs ($750 MeV$). In this configuration some of the QE scattered protons won't be stopped. What interesting info would I gain when looking at this data? 
+\item compare all the above plots with the simulated data that can be retrieved by the QFS generator.
 \end{itemize}
 
 \end{document}
