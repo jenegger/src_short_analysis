@@ -315,8 +315,52 @@ Angular cuts where applied: Theta < 90 and Phi 180$^{\circ}$ $\mp$ 40$^{\circ}$.
 
 \section{Now appying cuts for 12C(p,2p)10B reaction:}
 For this I applied a tpat cut: spill on + sofstart + califa + neuland. This should give me all reactions where I have for sure a src pair:\newline
+%missing momentum (=momentum of initial proton)
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{missing_mom_12C_10B.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{missing_mom_12C_10B_tpat.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+	\caption{Missing momentum(=momentum of the initial proton) for the 12C(p,2p)10B reaction. With cut we have much lower statistics.}
+\label{fig:missing_mom_12C_10B_tpat}
+\end{figure}
 
-
+%theta1 vs theta2 for src analysis
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{theta1_vs_theta2_10B.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{theta1_vs_theta2_10B_tpat.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+        \caption{Theta1 plus Theta2 for the two particles detected in CALIFA. Selection criteria: E\textunderscore deposited must be greater than 30 MeV.}
+\label{fig:theta1_vs_theta2_10B_tpat}
+\end{figure}
+%mass cut on the reconstructed neutron 850 MeV < m_n < 1100 MeV
+\begin{figure}[hbt!]
+  \includegraphics[width=\linewidth]{theta1_vs_theta2_m_cut.png}
+  \caption{Instead of using the tpat cut, here I used the cut on the reconstructed neutron mass: 850 MeV < m\textunderscore n < 1100 MeV.}
+  \label{fig:theta1_vs_theta2_m_cut}
+\end{figure}
+\newpage
 
 
 \section{To Dos and Open Questions}
