@@ -18,6 +18,7 @@
 \usepackage{subcaption}
 \newcommand{\sectionbreak}{\clearpage}
 \usepackage[section]{placeins}
+\usepackage{subcaption}
 \title{Short Documentation of SRC analysis}
 \begin{document}
 
@@ -26,7 +27,7 @@
 \section{Setup}
 Beam energy: 400 AMeV\newline
 Beamtype: 12C\newline
-Target: CH2\newline
+Target: CH2 $12.29mm$\newline
 Beam Time: 3 hours\newline
 Tracking detectors: MWPC 1,2,3 (just x position)\newline
 ToF measurement: START to ToFW\newline
@@ -61,7 +62,7 @@ The analysis of the missing momentum (components) is summarized in following plo
 The plots relating to the missing energy $E_{miss}$ are summarized in the following plots:\newline
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{missing_E_12C_11B.png}
-  \caption{Missing energy calculated in teh 12C rest frame.}
+  \caption{Missing energy calculated in the 12C rest frame.}
 \end{figure}
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{missing_E_12C_11B_vs_theta.png}
@@ -144,6 +145,179 @@ The plots relating the angular distributions:\newline
 \end{figure}
 \newline
 \newpage
+
+\section{Now appying cuts for 12C(p,2p)11B reaction:}
+Angular cuts where applied: Theta < 90 and Phi 180$^{\circ}$ $\mp$ 40$^{\circ}$. In the following I compare plots with angular cut and without:\newline
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{missing_mom_11B.png}  
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{missing_mom_11B_cut.png}  
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Momentum of initial proton inside the 12C ion.}
+\label{fig:missing_mom_11B_cut}
+\end{figure} 
+%now looking at missin mom z-component
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{missing_mom_11B_z_comp.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{missing_mom_11B_z_comp_cut.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Momentum of the initial proton inside the 12C ion - z component.}
+\label{fig:missing_mom_11B_z_comp_cut.png}
+\end{figure}
+
+%now looking at the missin energy in the 12C rest frame
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{missing_E_12C_11B.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{missing_E_12C_11B_cut.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Missing energy calculated in the 12C rest frame.}
+\label{fig:missing_mom_11B_z_comp_cut}
+\end{figure}
+
+%the gamma spectra:
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{gamma_spec_new.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{gamma_spec_cut.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Doppler corrected gamma spectrum.}
+\label{fig:gamma_spec_cut}
+\end{figure}
+
+%gamma vs multiplicity
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{gamma_multiplicity.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{gamma_multiplicity_cut.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Doppler corrected gamma spectrum (highest energy hit) versus Multiplicity.}
+\label{fig:gamma_multiplicity_cut}
+\end{figure}
+
+%gamma sum spectrum
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{gamma_sum.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{gamma_sum_cut.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Doppler corrected gamma spectrum summing up all the energies. The angle of the crystal with highest energy is taken for the doppler correction.This is not always true...}
+\label{fig:gamma_sum_cut}
+\end{figure}
+
+%gamma spectrum with angular cut and multiplicity < 3
+\begin{figure}[hbt!]
+  \includegraphics[width=\linewidth]{gamma_angular_and_mult_cut.png}
+  \caption{Doppler corrected gamma spectrum with angular cut and multiplicity cut (< 3).}
+  \label{fig:gamma_angular_and_mult_cut}
+\end{figure}
+
+%cos distribution for the p_i and 11B in 12C rest frame
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[width=\linewidth]{cos_11B_p_i.png}
+  \caption{Without cut.}
+  \label{fig:sub-first}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[width=\linewidth]{cos_11B_p_i_3d_cut.png}
+  \caption{With angular cut.}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Cosine between the initial proton and the 11B in the 12C beam. For the right plot I didn't set the y-components to zero and used the angular cut.}
+\label{fig:cos_11B_p_i_3d_cut}
+\end{figure}
+
+\begin{figure}[hbt!]
+  \includegraphics[width=\linewidth]{cos_11B_p_i_3d_cut_fake.png}
+  \caption{Angular cuts applied and giving 11B fragment an angular y-deflection of $\mp$ 0.03 rad.As the plots in figure \ref{fig:cos_11B_p_i_3d_cut} are not inutitive (we suppose peaking at -1, i.e. the two particles moving back to back) I set the deflection angle in y-direction of the outgoing 11B to -0.03 rad if the summed up Phi-angle in the 12C frame of the two protons is greater zero, otherwise  + 0.03 rad}
+  \label{fig:cos_11B_p_i_3d_cut_fake}
+\end{figure}
+\newpage
+
+\section{Additional plots for 12C(p,2p)11B reaction:}
+\begin{figure}[hbt!]
+  \includegraphics[width=\linewidth]{gamma_spec_vs_opening_angle.png}
+  \caption{Doppler corrected gamma spectrum versus opening angle of the detected gamma. The energy is doppler corrected (cm frame). The angle is in the lab frame.}
+  \label{fig:gamma_vs_opening_angle}
+\end{figure}
+
+\begin{figure}[hbt!]
+  \includegraphics[width=\linewidth]{11b_mom_vs_missing_mom.png}
+  \caption{Momentum of initial proton (missing momentum) vs momentum of 11B in 12C rest frame.}
+  \label{fig:gamma_angular_and_mult_cut}
+\end{figure}
+
+\section{Now appying cuts for 12C(p,2p)10B reaction:}
+For this I applied a tpat cut: spill on + sofstart + califa + neuland. This should give me all reactions where I have for sure a src pair:\newline
+
+
+
 
 \section{To Dos and Open Questions}
 \begin{itemize}
